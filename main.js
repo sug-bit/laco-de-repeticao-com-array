@@ -1,6 +1,24 @@
-const nome = ["Gustavo", "Bernardo", "Victorino", 7]
-const lista = document.getElementById("lista")
+const nomes = ["Gustavo", "Bernardo", "Victorino"]
 
-for (let nome of nomes){
-    lista.innerHTML+=
+const lista = document.getElementById("lista");
+
+const input = document.getElementById("input");
+
+function mostrarLista() {
+    lista.innerHTML = "";
+    for (let nome of nomes) {
+      lista.innerHTML+= `<li>${nome}</li>`
+    }
 }
+
+function addNome() {
+    let nome = input.value.trim();
+    if (nome === "") return;
+
+    nomes.push(nomes);
+
+    mostrarLista();
+    input.value = "";
+    input.focus();
+}
+mostrarLista();
